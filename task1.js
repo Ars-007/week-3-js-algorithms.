@@ -1,14 +1,17 @@
-
-// Write a function called checkGreaterTen that takes a number as an argument and checks whether it's greater than 10.
-// If the number is greater than 10, return the string "Greater than 10". If not, return the string "Not greater than 10".
-function checkGreaterTen(number) {
-    if (number > 10) {
-        return "Greater than 10!"
-    } else{
-        return "Not greater than 10!"
+// Challenge 1: Find the Longest String
+// Write a function to find the longest string in the array.
+function findLongestString(array) {
+    let longest = "";
+    
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element.length > longest.length) {
+            longest = element; 
+        }
     }
+    return longest;
 }
 // Usage examples:
-console.log(checkGreaterTen(15)); // "Greater than 10"
-console.log(checkGreaterTen(5)); // "Not greater than 10"
-console.log(checkGreaterTen(10)); // "Not greater than 10"
+console.log(findLongestString(["I", "am", "learning", "JavaScript"])); // "JavaScript"
+console.log(findLongestString(["one", "two", "three"])); // "three"
+console.log(findLongestString(["1", "22", "333"])); // "333"

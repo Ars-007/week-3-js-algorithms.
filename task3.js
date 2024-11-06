@@ -1,11 +1,18 @@
-// Challenge 3: Truncate String 
-// Write a function called truncateString that truncates a string if it is longer than the given maximum string length.
-// The function should return the truncated string with a "..." ending.
-// Note that the three dots at the end add to the string length.
-function truncateString(str, Maxlength) {
-    return str.length > Maxlength ? str.slice(0, Maxlength-3 ) + "..." : str;
+// Challenge 3: Find Strings with Dollar Sign
+// Write a function to find all strings that include a $ sign in the array.
+function findDollarStrings (array) {
+    let result = [];
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        if (element.includes ("$")) {
+             result.push (element);
+        }    
+    }
+    return result;
 }
 
 // Usage examples:
-console.log(truncateString("A-tisket a-tasket A green and yellow basket", 11)); // "A-tisket..."
-console.log(truncateString("Peter Piper picked a peck of pickled peppers", 14)); // "Peter Piper..."
+console.log(findDollarStrings(["I", "have", "$10"])); // ["$10"]
+console.log(findDollarStrings(["$", "$$", "$$$"])); // ["$", "$$", "$$$"]
+console.log(findDollarStrings(["no", "dollars", "here"])); // []

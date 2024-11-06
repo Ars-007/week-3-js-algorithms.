@@ -1,19 +1,17 @@
-// Challenge 5: Multi-level conditions III
-// Write a function called isLeapYear that checks whether a year is a leap year. If the year is evenly divisible by 4, 
-// it is a leap year, unless it is evenly divisible by 100. However, if it is divisible by 400, then it is.
-function isLeapYear(year) {
-    if (year % 400 === 0) {
-        return `${year} is a leap year.`;
-    } else if (year % 100 === 0) {
-        return `${year} is not a leap year.`;
-    } else if (year % 4 === 0) {
-        return `${year} is a leap year.`;
-    } else {
-        return `${year} is not a leap year.`;
+// Challenge 5: Sum of Numbers
+// Write a function to find the sum of all numbers in the array.
+function sumNumbers(array) {
+    let sum = 0;
+
+    for (let i = 0; i < array.length; i++) {
+        const element = array[i];
+        sum += element; 
     }
+
+    return sum; 
 }
+
 // Usage examples:
-console.log(isLeapYear(2000)); // "Leap year"
-console.log(isLeapYear(1800)); // "Not a leap year"
-console.log(isLeapYear(2004)); // "Leap year"
-console.log(isLeapYear(2021)); // "Not a leap year"
+console.log(sumNumbers([1, 2, 3, 4, 5])); // 15
+console.log(sumNumbers([10, 20, 30, 40, 50])); // 150
+console.log(sumNumbers([-1, -2, -3, -4, -5])); // -15

@@ -1,21 +1,18 @@
-// Challenge 4: Multi-level conditions II
-// Write a function called checkEligibility that accepts an age and returns whether the person is eligible to vote, 
-// drive, and/or drink. If the person is 16 or older, they can drive. If they are 18 or older, they can vote. 
-// If they are 21 or older, they can drink.
-function checkEligibility (age) {
-    if (age >= 16 && age <= 17) {
-        return "Can drive!"
-    }else if ( age >= 18 && age <= 20){
-return "Can vote and drive"
-    } else if (age >= 21){ 
-        return "Can vote, drive, and drink"
-    }else {
-        return "Can't vote,drive and drink!"
+// Challenge 4: Find Numbers Greater than Ten
+// Write a function to find all numbers that are larger than 10 in the array.
+function findNumbersGreaterThanTen (array) {
+let result= [];
+
+for (let i = 0; i < array.length; i++) {
+    const element = array[i];
+    if (element  > 10 ) { 
+    result.push (element);
     }
-    }
+}
+    return result;
+}
 
 // Usage examples:
-console.log(checkEligibility(15)); // "Can't vote, drive, or drink"
-console.log(checkEligibility(16)); // "Can drive"
-console.log(checkEligibility(18)); // "Can vote and drive"
-console.log(checkEligibility(22)); // "Can vote, drive, and drink"
+console.log(findNumbersGreaterThanTen([5, 10, 15, 20])); // [15, 20]
+console.log(findNumbersGreaterThanTen([1, 2, 3, 4, 5])); // []
+console.log(findNumbersGreaterThanTen([10, 20, 30, 40, 50])); // [20, 30, 40, 50]

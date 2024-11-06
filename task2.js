@@ -1,22 +1,13 @@
-// Challenge 2: Multi-level conditions
-// Write a function called assignGrade that takes a number score and assigns a letter grade based on the score.
-// The function should return "A" for scores 90 and above, "B" for scores 80 - 89, "C" for scores 70 - 79, 
-// "D" for scores 60 - 69 and "F" for scores below 60.
-function assignGrade(number) {
-    if (number >= 90 ) {
-        return "A"
-    } else if ( number >= 80 && number <= 89) {
-        return "B"
-    } else if ( number >= 70 && number <= 79) {
-        return "C"
-    } else if (number >= 60 && number <= 69) {
-        return "D"
-    } else 
-        return "F"
+// Challenge 2: Find the Largest Number
+// Write a function to find the largest number in the array.
+function findLargestNumber (array) {
+    let largest = "";
+
+        largest = Math.max (...array);
+            return largest;
 }
+
 // Usage examples:
- console.log(assignGrade(95)); // "A"
-console.log(assignGrade(85)); // "B"
-console.log(assignGrade(75)); // "C"
-console.log(assignGrade(65)); // "D"
-console.log(assignGrade(59)); // "F"
+console.log(findLargestNumber([1, 2, 3, 4, 5])); // 5
+console.log(findLargestNumber([10, 20, 30, 40, 50])); // 50
+console.log(findLargestNumber([-1, -2, -3, -4, -5])); // -1

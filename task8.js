@@ -1,17 +1,11 @@
-// Challenge 8: Temperature Checker
-// Write a function called checkTemp that takes a temperature in Fahrenheit as an argument.
-// If the temperature is below 32, return "Freezing". If it's 32 - 50, return "Cold". 
-// If it's 51 - 70, return "Mild". If it's 71 - 90, return "Warm". If it's above 90, return "Hot".
-function checkTemp(temp) {
-    if (temp < 32) return "Freezing";
-    if (temp <= 50) return "Cold";
-    if (temp <= 70) return "Mild";
-    if (temp <= 90) return "Warm";
-    return "Hot";
+// Challenge 8: Write a program that prints the numbers from 1 to 100. But for multiples of three print "Fizz"
+// instead of the number and for the multiples of five print "Buzz". For numbers which are multiples
+// of both three and five print "FizzBuzz".
+// No need for permutations as there are no arguments to this function. Check the printed output.
+
+for (let i = 1; i <= 100; i++) {
+    if (i %3 === 0 && i %5 === 0) console.log (i,"FizzBuzz")
+    else if (i %3 === 0) console.log (i,"Fizz");
+    else if (i %5 === 0) console.log (i,"Buzz");
+    else console.log(i, "not applicable")
 }
-// Usage examples:
-console.log(checkTemp(30)); // "Freezing"
-console.log(checkTemp(45)); // "Cold"
-console.log(checkTemp(65)); // "Mild"
-console.log(checkTemp(75)); // "Warm"
-console.log(checkTemp(95)); // "Hot"
